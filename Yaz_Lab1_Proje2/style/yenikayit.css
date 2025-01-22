@@ -1,0 +1,176 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f3f4f6;
+    color: #333;
+}
+
+.register-wrapper {
+    display: flex;
+    align-items: stretch;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 80%;
+    max-width: 1000px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.register-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+
+.register-left {
+    background: linear-gradient(135deg, #8A2BE2, #FFA500);
+    color: #fff;
+    padding: 50px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+    .register-left h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        animation: fadeIn 2s ease; /* Giriş animasyonu eklendi */
+    }
+
+.profile-picture-container {
+    grid-column: 1 / -1; /* Butonu iki sütun boyunca yay */
+    text-align: center;
+    margin-top: 10px;
+    animation: fadeIn 2s ease; /* Giriş animasyonu eklendi */
+}
+
+    .profile-picture-container img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+
+    .profile-picture-container input[type="file"] {
+        display: none;
+    }
+
+    .profile-picture-container label {
+        font-weight: bold;
+        color: #e0e0e0;
+        cursor: pointer;
+        display: block;
+        margin-top: 8px;
+    }
+
+.register-right {
+    width: 60%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .register-right form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* İki eşit sütun */
+        gap: 20px;
+        animation: fadeIn 2s ease; /* Giriş animasyonu eklendi */
+    }
+
+    .register-right input[type="text"],
+    .register-right input[type="email"],
+    .register-right input[type="password"],
+    .register-right input[type="date"],
+    .register-right input[type="tel"],
+    .register-right select {
+        width: 100%; /* Girdileri sütunun tam genişliğine yay */
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .register-right input:focus {
+        border-color: #9013fe;
+        box-shadow: 0 0 8px rgba(144, 19, 254, 0.2);
+        outline: none;
+    }
+
+    .register-right button {
+        width: 100%;
+        padding: 12px;
+        background: #8A2BE2;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.1s, box-shadow 0.3s;
+        box-shadow: 0 5px 15px rgba(144, 19, 254, 0.3);
+        margin-top: 10px;
+    }
+
+        .register-right button:hover {
+            background: #6a1bb8;
+        }
+
+    .register-right .links {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+        .register-right .links a {
+            text-decoration: none;
+            color: #8A2BE2;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+            .register-right .links a:hover {
+                color: #FFA500;
+            }
+
+            
+/* Giriş animasyonları */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,156 @@
+﻿/* Genel stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f6f7fb;
+    overflow: hidden;
+}
+
+
+.container {
+    display: flex;
+    width: 900px; 
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+    .container:hover {
+        transform: translateY(-6px); 
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+    }
+
+.welcome-section {
+    width: 50%;
+    background: linear-gradient(135deg, #9013fe, #f5a623);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px; 
+}
+
+    .welcome-section h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 2s ease; /* Giriş animasyonu eklendi */
+    }
+
+.login-section {
+    width: 50%;
+    background-color: #fff;
+    padding: 50px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 2px solid #eee;
+    animation: slideIn 2s ease; 
+}
+
+    .login-section h2 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .login-section p {
+        color: #777;
+        margin-bottom: 30px;
+        font-size: 14px;
+    }
+
+    .login-section input[type="text"],
+    .login-section input[type="password"],
+    .login-section input[type="email"] {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .login-section input:focus {
+        border-color: #9013fe;
+        box-shadow: 0 0 8px rgba(144, 19, 254, 0.2);
+        outline: none;
+    }
+
+.custom-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #9013fe;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(144, 19, 254, 0.3);
+}
+
+    .custom-button:hover {
+        background-color: #7d10db;
+        box-shadow: 0 7px 20px rgba(125, 16, 219, 0.4);
+    }
+
+    .custom-button:active {
+        transform: scale(0.98);
+    }
+
+.login-section .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+    .login-section .options a {
+        font-size: 14px;
+        color: #9013fe;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+        .login-section .options a:hover {
+            color: #FFA500;
+        }
+
+/* Giriş animasyonları */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
